@@ -153,11 +153,15 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_8 = {
   "class": "mr-3"
 };
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Testing");
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Users");
 var _hoisted_10 = {
   "class": "mr-3"
 };
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Logout");
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Testing");
+var _hoisted_12 = {
+  "class": "mr-3"
+};
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Logout");
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("nav", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["NavLink"], {
     href: "/",
@@ -175,13 +179,20 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     _: 1 /* STABLE */
   })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["NavLink"], {
-    href: "/testing"
+    href: "/users"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_9];
     }),
     _: 1 /* STABLE */
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" method post  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" render as button "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" pass data "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" :class=\"{ 'font-bold underline': $page.url.startsWith('/about') }\" "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["NavLink"], {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["NavLink"], {
+    href: "/testing"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_11];
+    }),
+    _: 1 /* STABLE */
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" method post  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" render as button "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" pass data "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" :class=\"{ 'font-bold underline': $page.url.startsWith('/about') }\" "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["NavLink"], {
     href: "/logout",
     method: "post",
     as: "button",
@@ -190,7 +201,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_11];
+      return [_hoisted_13];
     }),
     _: 1 /* STABLE */
   })])])]);
@@ -279,6 +290,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.h)(App, props);
       }
     }).use(plugin).mount(el);
+  },
+  title: function title(_title) {
+    return _title + 'Laravel Vue';
   }
 });
 
@@ -507,6 +521,14 @@ var map = {
 	"./Testing.vue": [
 		"./resources/js/Pages/Testing.vue",
 		"resources_js_Pages_Testing_vue"
+	],
+	"./Users": [
+		"./resources/js/Pages/Users.vue",
+		"resources_js_Pages_Users_vue"
+	],
+	"./Users.vue": [
+		"./resources/js/Pages/Users.vue",
+		"resources_js_Pages_Users_vue"
 	]
 };
 function webpackAsyncContext(req) {

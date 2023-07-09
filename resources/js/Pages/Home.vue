@@ -1,10 +1,10 @@
 <template>
-    <head>
-        <title>My app - Home</title>
-        
-    </head>
+    <Head>
+        <title>Home</title>
+        <meta name="description" content="Home page">
+    </Head>
     <Layout>
-        <h1>Home aaaaaaaaaa </h1>
+        <h1>Home test </h1>
     </Layout>
 </template>
 

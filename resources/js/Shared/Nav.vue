@@ -14,6 +14,9 @@
             <li class="mr-3">
                 <NavLink href="/about">About</NavLink>
             </li>
+            <li class="mr-3">
+                <NavLink href="/users">Users</NavLink>
+            </li>
 
             <li class="mr-3">
                 <NavLink href="/testing">Testing</NavLink>
