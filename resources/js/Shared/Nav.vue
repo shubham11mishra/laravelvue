@@ -35,6 +35,6 @@
 </template>
 
 <script setup>
-import NavLink from './NavLink.vue';
+import NavLink from '@/Shared/NavLink.vue';
 
 </script>

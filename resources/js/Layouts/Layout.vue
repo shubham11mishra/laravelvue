@@ -14,7 +14,7 @@
 
 <script setup>
 import { Head } from '@inertiajs/vue3';
-import Nav from './Nav.vue';
+import Nav from '@/Shared/Nav.vue';
 
 </script>
 
