@@ -4,7 +4,10 @@ import Layout from '@/Layouts/Layout.vue';
 createInertiaApp({
     resolve: async name => {
         let page = (await import(`./Pages/${name}`)).default;
-        page.layout = page.layout || Layout;
+        if(page.layout === undefined){
+            page.layout =  Layout;
+        }
+        
         return page;
     },
     setup({ el, App, props, plugin }) {

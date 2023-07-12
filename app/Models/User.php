@@ -41,4 +41,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+   
+   /**
+    * The function sets the password attribute of a model instance by encrypting the given value using
+    * bcrypt.
+    * 
+    * @param value The value parameter represents the value that is being set for the password
+    * attribute. In this case, it is the plain text password that the user wants to set for their
+    * account.
+    */
+     public function setPasswordAttribute($value)
+     {
+        $this->attributes['password'] = bcrypt($value);
+     }
 }

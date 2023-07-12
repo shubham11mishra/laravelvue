@@ -1,8 +1,9 @@
 <?php
 
 use App\Models\User;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::get('/users', function () {
 });
 
 Route::get('/testing', function () {
-    sleep(3);
+
     return Inertia::render('Testing');
 });
 
@@ -47,4 +48,18 @@ Route::get('/testing', function () {
 Route::post('/logout', function () {
     // return Inertia::render('Testing');
     dd(request('foo'));
+});
+
+Route::get('/register', function () {
+    return Inertia::render('Users/Create');
+});
+
+Route::post('/users/create', function () {
+    $response = Request::validate([
+        'name' => 'required',
+        'email' => ['required', 'email', 'unique:users'],
+        'password' => ['required', 'min:5']
+    ]);
+    User::create($response);
+    return redirect('/');
 });

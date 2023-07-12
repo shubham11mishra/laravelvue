@@ -266,7 +266,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             return __webpack_require__("./resources/js/Pages lazy recursive ^\\.\\/.*$")("./".concat(name));
           case 2:
             page = _context.sent["default"];
-            page.layout = page.layout || _Layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_2__["default"];
+            if (page.layout === undefined) {
+              page.layout = _Layouts_Layout_vue__WEBPACK_IMPORTED_MODULE_2__["default"];
+            }
             return _context.abrupt("return", page);
           case 5:
           case "end":
@@ -521,13 +523,21 @@ var map = {
 		"./resources/js/Pages/Testing.vue",
 		"resources_js_Pages_Testing_vue"
 	],
-	"./Users": [
-		"./resources/js/Pages/Users.vue",
-		"resources_js_Pages_Users_vue"
+	"./Users/Create": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
 	],
-	"./Users.vue": [
-		"./resources/js/Pages/Users.vue",
-		"resources_js_Pages_Users_vue"
+	"./Users/Create.vue": [
+		"./resources/js/Pages/Users/Create.vue",
+		"resources_js_Pages_Users_Create_vue"
+	],
+	"./Users/Index": [
+		"./resources/js/Pages/Users/Index.vue",
+		"resources_js_Pages_Users_Index_vue"
+	],
+	"./Users/Index.vue": [
+		"./resources/js/Pages/Users/Index.vue",
+		"resources_js_Pages_Users_Index_vue"
 	]
 };
 function webpackAsyncContext(req) {
