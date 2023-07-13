@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\product;
 use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -63,3 +64,10 @@ Route::post('/users/create', function () {
     User::create($response);
     return redirect('/');
 });
+
+
+Route::get('/products', function () {
+    return product::with('category')->get()->toJson();
+    return Inertia::render('Users/Create');
+});
+
