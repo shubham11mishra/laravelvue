@@ -20,11 +20,7 @@
             </div>
 
             <form class="mt-4" @submit.prevent="submit">
-                <label class="block">
-                    <span class="text-sm text-gray-700">Username</span>
-                    <input v-model="form.name" type="name" class="block w-full p-2 mt-1 border ">
-                    <span v-if="form.errors.name" v-text="form.errors.name" class="text-xs text-red-600"></span>
-                </label>
+                <InputBox type="text" v-model="form.name" :error="form.errors.name" >Username</InputBox>
                 <label class="block">
                     <span class="text-sm text-gray-700">Email</span>
                     <input v-model="form.email" type="email" class="block w-full p-2 mt-1 border">
@@ -67,7 +63,6 @@ import GuestLayout from '@/Layouts/GuestLayout.vue';
 export default {
     components: {
         GuestLayout,
-
     },
     layout: GuestLayout,
 }
@@ -75,7 +70,7 @@ export default {
 <script setup>
 import { Head, router, useForm } from '@inertiajs/vue3';
 import { reactive, ref } from 'vue'
-
+import InputBox from '@/Shared/FormComponent/InputBox.vue';
 
 const form = useForm({
     name: null,
@@ -85,7 +80,7 @@ const form = useForm({
 const submit = function () {
     form.post('/users/create', form)
 };
-
+const a = ref('')
 // defineProps({
 //     errors: Object
 // });
@@ -110,5 +105,4 @@ const submit = function () {
 
 
 </script>
-  
-  
+
